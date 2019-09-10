@@ -11,6 +11,7 @@ module.exports = {
     "semi": 0,
     "react-native/no-inline-styles": 0,
     "curly": 0,
-    "eqeqeq": 0
+    "eqeqeq": 0,
+    "no-return-assign": 0
   }
 };
