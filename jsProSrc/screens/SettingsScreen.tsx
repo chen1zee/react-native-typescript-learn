@@ -6,7 +6,8 @@ import { HeaderBackButton } from "react-navigation-stack";
 export default class SettingsScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
     return {
-      headerLeft: <HeaderBackButton onPress={() => navigation.goBack(null)}  layoutPreset="left"  scene={null}/>,
+      // @ts-ignore
+      headerLeft: <HeaderBackButton onPress={() => navigation.goBack(null)}  layoutPreset="left" scene={null}/>,
       headerTitle: <Logo />,
       headerBackTitle: "Settings",
       headerLayoutPreset: "center"
