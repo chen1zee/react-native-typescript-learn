@@ -2,17 +2,19 @@ import { createAppContainer } from "react-navigation";
 import {createDrawerNavigator} from "react-navigation-drawer"
 import BottomTabNavigator from "./bottom-tab-navigator";
 import { SettingsNavigator } from "./screen-stack-navigators";
-import {ROUTE_2_TITLE, ROUTE_NAMES} from "js_pro_src/navigators/routeNames";
+import {SCREEN_2_TITLE, SCREEN_NAMES} from "js_pro_src/screens/screenNames";
+import DatepickerScreen from "js_pro_src/screens/exampleScreen/DatepickerScreen";
 
 const DrawerNavigator = createDrawerNavigator({
-  [ROUTE_NAMES.Home]: BottomTabNavigator,
-  [ROUTE_NAMES.Settings]: SettingsNavigator
+  [SCREEN_NAMES.Home]: BottomTabNavigator,
+  [SCREEN_NAMES.Settings]: SettingsNavigator,
+  [SCREEN_NAMES.Datepicker]: DatepickerScreen,
 }, {
   // @ts-ignore
   defaultNavigationOptions: ({navigation}) => {
-    const routeName: keyof typeof ROUTE_2_TITLE = navigation.state.routeName
+    const routeName: keyof typeof SCREEN_2_TITLE = navigation.state.routeName
     return {
-      title: ROUTE_2_TITLE[routeName]
+      title: SCREEN_2_TITLE[routeName]
     }
   }
 });
