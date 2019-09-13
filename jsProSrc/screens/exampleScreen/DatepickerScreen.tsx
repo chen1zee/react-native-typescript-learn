@@ -1,14 +1,11 @@
 import React from "react"
-import {StyleSheet, View, Platform, DatePickerIOS, Text} from "react-native"
-import makeExampleScreen from "js_pro_src/screens/exampleScreen/makeExampleScreenDecorator";
-import {SCREEN_2_TITLE, SCREEN_NAMES} from "js_pro_src/screens/screenNames";
+import {StyleSheet, View, Platform, DatePickerIOS} from "react-native"
 import Datepicker from "react-native-datepicker"
-import {percW2dp} from "js_pro_src/utils/sizes";
+import {percW2dp, pxW2dp} from "js_pro_src/utils/sizes";
 
-@makeExampleScreen(SCREEN_NAMES.Datepicker, SCREEN_2_TITLE.Datepicker)
 class DatepickerScreen extends React.Component {
   state = {
-    date: new Date()
+    date: new Date(2019, 11, 12)
   }
   _onDateChange = date => {
     this.setState({date})
@@ -21,10 +18,11 @@ class DatepickerScreen extends React.Component {
           <DatePickerIOS date={date} onDateChange={this._onDateChange} /> :
           <Datepicker
             customStyles={{
-              dateInput: { borderColor: "red" }
+              dateInput: { borderColor: "red", width: pxW2dp(350) }
             }}
-            iconComponent={<Text />}
-            style={styles.datepicker} androidMode="spinner" mode="datetime"
+            date={date}
+            // iconComponent={<Text />}
+            locale="zh_cn" style={styles.datepicker} androidMode="spinner" mode="datetime"
             hideText={false} onDateChange={this._onDateChange}
           />
         }

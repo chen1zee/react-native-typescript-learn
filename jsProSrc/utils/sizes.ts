@@ -1,4 +1,4 @@
-import { Dimensions } from "react-native"
+import { Dimensions, PixelRatio } from "react-native"
 /**
  *  尺寸转换公用函数
  * */
@@ -6,6 +6,8 @@ import { Dimensions } from "react-native"
 // 设计稿 px
 const designW = 750
 const designH = 1334
+// 物理屏幕点 / 显示像素   -> 即一个像素 以多少个屏幕点显示 , 如 retina 为 2
+const pixelRatio = PixelRatio.get()
 
 // 获取屏幕的dp
 const { width: screenW, height: screenH } = Dimensions.get("window")
@@ -40,4 +42,12 @@ export function percW2dp(perc) {
  * */
 export function percH2dp(perc) {
   return perc / 100 * screenH
+}
+
+/**
+ * 按照 pixelRatio 计算
+ * @param {number} pR 想呈现的 物理点数  如在 rentina 屏中，想 展示 1个物理点
+ * */
+export function pR2dp(pR) {
+  return pR / pixelRatio
 }

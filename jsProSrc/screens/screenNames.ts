@@ -4,7 +4,8 @@ export enum SCREEN_NAMES {
   Search = "Search",
   Settings = "Settings",
   /** exampleScreen */
-  Datepicker = "Datepicker",
+  Datepicker = "Datepicker", // 时间选择器示例
+  WatchStop = "WatchStop" // 计时器示例
 }
 
 export enum SCREEN_2_TITLE {
@@ -14,4 +15,5 @@ export enum SCREEN_2_TITLE {
   Settings = "设置",
   /** exampleScreen */
   Datepicker = "日期选择",
+  WatchStop = "计时器"
 }
