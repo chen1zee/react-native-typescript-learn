@@ -10,6 +10,8 @@ import {HeaderBackButton} from "react-navigation-stack";
 import {Logo} from "js_pro_src/components/header/header";
 import DatepickerScreen from "js_pro_src/screens/exampleScreen/DatepickerScreen";
 import WatchStopScreen from "js_pro_src/screens/exampleScreen/WatchStopScreen";
+import WeatherReportScreen from "js_pro_src/screens/exampleScreen/WeatherReportScreen";
+import TwitterAniScreen from "js_pro_src/screens/exampleScreen/TwitterAniScreen";
 
 /**
  * 制造 exampleNavigation 修饰器
@@ -51,5 +53,19 @@ export const WatchStopNavigator = createStackNavigator({
   [SCREEN_NAMES.WatchStop]: {
     screen: WatchStopScreen,
     navigationOptions: makeExampleNavigation(SCREEN_NAMES.WatchStop, SCREEN_2_TITLE.WatchStop)
+  }
+})
+
+export const WeatherReportNavigator = createStackNavigator({
+  [SCREEN_NAMES.WeatherReport]: {
+    screen: WeatherReportScreen,
+    navigationOptions: makeExampleNavigation(SCREEN_NAMES.WeatherReport, SCREEN_2_TITLE.WeatherReport)
+  }
+})
+
+export const TwitterAniNavigator = createStackNavigator({
+  [SCREEN_NAMES.TwitterAni]: {
+    screen: TwitterAniScreen,
+    navigationOptions: makeExampleNavigation(SCREEN_NAMES.TwitterAni, SCREEN_2_TITLE.TwitterAni)
   }
 })
