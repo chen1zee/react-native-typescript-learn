@@ -11,5 +11,7 @@
 * react router https://reacttraining.com/react-router/web/guides/quick-start
 *
 * mobx https://mobx.js.org/
+*
+* 看至 https://github.com/fangwei716/30-days-of-react-native 3day
 * */
 console.log('read state 文档阅读')
