@@ -8,6 +8,7 @@ export const SCREEN_NAMES = {
   WatchStop: "WatchStop", // 计时器示例
   WeatherReport: "WeatherReport", // 天气示例
   TwitterAni: "TwitterAni", // Twitter animation 示例
+  GestureExample: "GestureExample" // 手势 示例
 }
 
 export const SCREEN_2_TITLE = {
@@ -19,5 +20,6 @@ export const SCREEN_2_TITLE = {
   Datepicker: "日期选择",
   WatchStop: "计时器",
   WeatherReport: "天气预报",
-  TwitterAni: "Twitter 动画"
+  TwitterAni: "Twitter 动画",
+  GestureExample: "手势 例子"
 }

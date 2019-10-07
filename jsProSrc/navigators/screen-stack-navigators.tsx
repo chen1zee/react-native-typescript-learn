@@ -12,18 +12,24 @@ import DatepickerScreen from "js_pro_src/screens/exampleScreen/DatepickerScreen"
 import WatchStopScreen from "js_pro_src/screens/exampleScreen/WatchStopScreen";
 import WeatherReportScreen from "js_pro_src/screens/exampleScreen/WeatherReportScreen";
 import TwitterAniScreen from "js_pro_src/screens/exampleScreen/TwitterAniScreen";
+import GestureExampleScreen from "js_pro_src/screens/exampleScreen/GestureExampleScreen";
 
 /**
  * 制造 exampleNavigation 修饰器
  * @param {string} routeName 路由标志, 用于导航 如 "Settings"
  * @param {string} routeTitle 路由名称 用于显示 如 "设置"
+ * @param {boolean} showHeader 显示header flag
  * */
-const makeExampleNavigation = (routeName, routeTitle): NavigationStackScreenOptions => ({navigation}) => ({
-  // @ts-ignore
-  headerLeft: <HeaderBackButton onPress={() => navigation.goBack(null)} layoutPreset="left" scene={null} />,
-  headerTitle: <Logo />,
-  headerBackTitle: routeTitle
-})
+const makeExampleNavigation = (routeName, routeTitle, showHeader=true): NavigationStackScreenOptions => ({navigation}) => {
+  const tmp: any = {
+    // @ts-ignore
+    headerLeft: <HeaderBackButton onPress={() => navigation.goBack(null)} layoutPreset="left" scene={null} />,
+    headerTitle: <Logo />,
+    headerBackTitle: routeTitle,
+  }
+  if (!showHeader) tmp.header = null
+  return tmp
+}
 
 //Add navigators with screens in this file
 export const HomeNavigator = createStackNavigator({
@@ -66,6 +72,13 @@ export const WeatherReportNavigator = createStackNavigator({
 export const TwitterAniNavigator = createStackNavigator({
   [SCREEN_NAMES.TwitterAni]: {
     screen: TwitterAniScreen,
-    navigationOptions: makeExampleNavigation(SCREEN_NAMES.TwitterAni, SCREEN_2_TITLE.TwitterAni)
+    navigationOptions: makeExampleNavigation(SCREEN_NAMES.TwitterAni, SCREEN_2_TITLE.TwitterAni, false)
+  }
+})
+
+export const GestureExampleNavigator = createStackNavigator({
+  [SCREEN_NAMES.GestureExample]: {
+    screen: GestureExampleScreen,
+    navigationOptions: makeExampleNavigation(SCREEN_NAMES.GestureExample, SCREEN_2_TITLE.GestureExample)
   }
 })

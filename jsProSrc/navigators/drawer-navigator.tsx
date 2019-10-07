@@ -2,7 +2,7 @@ import { createAppContainer } from "react-navigation";
 import {createDrawerNavigator} from "react-navigation-drawer"
 import BottomTabNavigator from "./bottom-tab-navigator";
 import {
-  DatepickerNavigator,
+  DatepickerNavigator, GestureExampleNavigator,
   SettingsNavigator, TwitterAniNavigator,
   WatchStopNavigator,
   WeatherReportNavigator
@@ -16,6 +16,7 @@ const DrawerNavigator = createDrawerNavigator({
   [SCREEN_NAMES.WatchStop]: WatchStopNavigator,
   [SCREEN_NAMES.WeatherReport]: WeatherReportNavigator,
   [SCREEN_NAMES.TwitterAni]: TwitterAniNavigator,
+  [SCREEN_NAMES.GestureExample]: GestureExampleNavigator
 }, {
   // @ts-ignore
   defaultNavigationOptions: ({navigation}) => {

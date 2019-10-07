@@ -10,7 +10,7 @@ const designH = 1334
 const pixelRatio = PixelRatio.get()
 
 // 获取屏幕的dp
-const { width: screenW, height: screenH } = Dimensions.get("window")
+export const { width: screenW, height: screenH } = Dimensions.get("window")
 
 /**
  * 设计稿 px 转 dp (相对设计稿宽度计算)

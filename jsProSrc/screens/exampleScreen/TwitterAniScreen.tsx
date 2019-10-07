@@ -1,5 +1,15 @@
 import React from "react"
-import {View, Text, StyleSheet, Dimensions, ScrollView, StatusBar, Animated, Button, Alert} from "react-native"
+import {
+  View,
+  Text,
+  StyleSheet,
+  Dimensions,
+  ScrollView,
+  StatusBar,
+  Animated,
+  Button,
+  LayoutChangeEvent
+} from "react-native"
 import {Header} from "react-navigation-stack"
 import Icon from "react-native-vector-icons/Ionicons"
 
@@ -23,9 +33,15 @@ class TwitterAniScreen extends React.PureComponent {
       { toValue: 1, duration: 100, useNativeDriver: true }
     ).start()
   }
+  componentDidMount(): void {
+    console.log("mounted HEADER HEIGHT", Header.HEIGHT)
+  }
+  onLayout = ({nativeEvent: { layout: { height } }}: LayoutChangeEvent) => {
+    console.log('layout height ', height)
+  }
   render() {
     return (
-      <View style={styles.container}>
+      <View style={{flex: 1, backgroundColor: "#ddd"}} onLayout={this.onLayout}>
         <ScrollView style={styles.scrollContainer} contentContainerStyle={styles.scrollInner}>
           <View style={{minHeight: 700}}>
             <Text>1323</Text>
@@ -46,6 +62,7 @@ const styles = (() => {
   const {height: winH} = Dimensions.get("window")
   // @ts-ignore
   const contentHeight = winH - Header.HEIGHT - (StatusBar.currentHeight || 0)
+  console.log("Header HEIGHT", Header.HEIGHT)
   return StyleSheet.create({
     scrollContainer: { backgroundColor: "#fbfbfb" },
     container: { height: contentHeight },
