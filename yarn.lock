@@ -5320,6 +5320,11 @@ react-native-gesture-handler@^1.4.1:
     invariant "^2.2.4"
     prop-types "^15.7.2"
 
+react-native-maps@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.npm.taobao.org/react-native-maps/download/react-native-maps-0.26.1.tgz#6ec316259b38d259c8974448d894bd7a23101da4"
+  integrity sha1-bsMWJZs40lnIl0RI2JS9eiMQHaQ=
+
 react-native-reanimated@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npm.taobao.org/react-native-reanimated/download/react-native-reanimated-1.2.0.tgz#9219227a52a5dfa4d34c324596d6726ccd874293"

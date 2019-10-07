@@ -13,6 +13,9 @@ import WatchStopScreen from "js_pro_src/screens/exampleScreen/WatchStopScreen";
 import WeatherReportScreen from "js_pro_src/screens/exampleScreen/WeatherReportScreen";
 import TwitterAniScreen from "js_pro_src/screens/exampleScreen/TwitterAniScreen";
 import GestureExampleScreen from "js_pro_src/screens/exampleScreen/GestureExampleScreen";
+import MapSwiperScreen from "js_pro_src/screens/exampleScreen/MapSwiperScreen";
+import TwitterUsrScreen from "js_pro_src/screens/exampleScreen/TwitterUsrScreen";
+import TumblrMenuScreen from "js_pro_src/screens/exampleScreen/TumblrMenuScreen";
 
 /**
  * 制造 exampleNavigation 修饰器
@@ -80,5 +83,26 @@ export const GestureExampleNavigator = createStackNavigator({
   [SCREEN_NAMES.GestureExample]: {
     screen: GestureExampleScreen,
     navigationOptions: makeExampleNavigation(SCREEN_NAMES.GestureExample, SCREEN_2_TITLE.GestureExample)
+  }
+})
+
+export const MapSwiperNavigator = createStackNavigator({
+  [SCREEN_NAMES.MapSwiper]: {
+    screen: MapSwiperScreen,
+    navigationOptions: makeExampleNavigation(SCREEN_NAMES.MapSwiper, SCREEN_2_TITLE.MapSwiper)
+  }
+})
+
+export const TwitterUsrNavigator = createStackNavigator({
+  [SCREEN_NAMES.TwitterUsr]: {
+    screen: TwitterUsrScreen,
+    navigationOptions: makeExampleNavigation(SCREEN_NAMES.TwitterUsr, SCREEN_2_TITLE.TwitterUsr)
+  }
+})
+
+export const TumblrMenuNavigator = createStackNavigator({
+  [SCREEN_NAMES.TumblrMenu]: {
+    screen: TumblrMenuScreen,
+    navigationOptions: makeExampleNavigation(SCREEN_NAMES.TumblrMenu, SCREEN_2_TITLE.TumblrMenu)
   }
 })

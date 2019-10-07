@@ -2,8 +2,8 @@ import { createAppContainer } from "react-navigation";
 import {createDrawerNavigator} from "react-navigation-drawer"
 import BottomTabNavigator from "./bottom-tab-navigator";
 import {
-  DatepickerNavigator, GestureExampleNavigator,
-  SettingsNavigator, TwitterAniNavigator,
+  DatepickerNavigator, GestureExampleNavigator, MapSwiperNavigator,
+  SettingsNavigator, TumblrMenuNavigator, TwitterAniNavigator, TwitterUsrNavigator,
   WatchStopNavigator,
   WeatherReportNavigator
 } from "./screen-stack-navigators";
@@ -16,7 +16,10 @@ const DrawerNavigator = createDrawerNavigator({
   [SCREEN_NAMES.WatchStop]: WatchStopNavigator,
   [SCREEN_NAMES.WeatherReport]: WeatherReportNavigator,
   [SCREEN_NAMES.TwitterAni]: TwitterAniNavigator,
-  [SCREEN_NAMES.GestureExample]: GestureExampleNavigator
+  [SCREEN_NAMES.GestureExample]: GestureExampleNavigator,
+  [SCREEN_NAMES.MapSwiper]: MapSwiperNavigator,
+  [SCREEN_NAMES.TwitterUsr]: TwitterUsrNavigator,
+  [SCREEN_NAMES.TumblrMenu]: TumblrMenuNavigator,
 }, {
   // @ts-ignore
   defaultNavigationOptions: ({navigation}) => {
