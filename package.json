@@ -13,7 +13,7 @@
   "dependencies": {
     "@babel/plugin-proposal-decorators": "^7.6.0",
     "react": "16.8.6",
-    "react-native": "0.60.5",
+    "react-native": "0.62.3",
     "react-native-datepicker": "^1.7.2",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-maps": "^0.26.1",
